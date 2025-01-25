@@ -14,7 +14,8 @@ const total = populations.reduce((sum, item) => {
   return result;
 }, 0);
 
-const average = Math.round(total / populations.length);
+const average =
+  populations.length === 0 ? 0 : Math.round(total / populations.length);
 
 totalSpan.textContent = numberWithCommas(total);
 averageSpan.textContent = numberWithCommas(average);
